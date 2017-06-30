@@ -13,12 +13,14 @@ class GameScene: SKScene {
     
     var movingGround: BCMovingGround!
     var character: BCCharacter!
+    var isStarted = false
+    var cloudGenerator: BCCloudGenerator!
     
     override func didMove(to view: SKView) {
         
         backgroundColor = UIColor(red: 159.0/255.0, green: 201.0/255.0, blue: 244.0/255.0, alpha: 1.0)
         
-        movingGround = BCMovingGround(size: CGSize(width: view.frame.width, height: 20))
+        movingGround = BCMovingGround(size: CGSize(width: view.frame.width, height: kBCGroundHeight))
         movingGround.position = CGPoint(x: 0, y: view.frame.size.height/2)
         addChild(movingGround)
         
@@ -27,11 +29,27 @@ class GameScene: SKScene {
         addChild(character)
         character.breathe()
         
+        cloudGenerator = BCCloudGenerator(color: UIColor.clear, size: view.frame.size)
+        cloudGenerator.position = view.center
+        addChild(cloudGenerator)
+        cloudGenerator.populate(num: 2)
+        cloudGenerator.startGenerating(seconds: 15)
+        
+    }
+    
+    func start() {
+        isStarted = true
+        character.stopBreathing()
+        character.startRunning()
+        movingGround.start()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        //movingGround.start()
-        character.stop()
-        character.startRunning()
+        if !isStarted {
+            start()
+        } else {
+            character.flip()
+        }
     }
+    
 }

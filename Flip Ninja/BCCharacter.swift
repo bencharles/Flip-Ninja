@@ -16,6 +16,7 @@ class BCCharacter: SKSpriteNode {
     var arm: SKSpriteNode!
     var leftFoot: SKSpriteNode!
     var rightFoot: SKSpriteNode!
+    var isUpsideDown = false
     
     init() {
         super.init(texture: nil, color: UIColor.clear, size: CGSize(width: 22, height: 44))
@@ -69,6 +70,23 @@ class BCCharacter: SKSpriteNode {
         
     }
     
+    func flip() {
+        isUpsideDown = !isUpsideDown
+        
+        var scale: CGFloat!
+        if isUpsideDown {
+            scale = -1.0
+        } else {
+            scale = 1.0
+        }
+        
+        let translate = SKAction.moveBy(x: 0, y: scale * (size.height + kBCGroundHeight), duration: 0.01)
+        let flip = SKAction.scaleY(to: scale, duration: 0.01)
+        
+        run(translate)
+        run(flip)
+    }
+    
     func startRunning() {
         let rotateBack = SKAction.rotate(byAngle: -CGFloat(Double.pi)/2.0, duration: 0.1)
         arm.run(rotateBack)
@@ -98,7 +116,7 @@ class BCCharacter: SKSpriteNode {
         body.run(SKAction.repeatForever(breath))
     }
     
-    func stop() {
+    func stopBreathing() {
         body.removeAllActions()
     }
     

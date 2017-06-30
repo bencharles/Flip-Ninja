@@ -18,6 +18,9 @@
 		5F2FE4121F06BEEC00BB4532 /* Flip_NinjaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE4111F06BEEC00BB4532 /* Flip_NinjaUITests.swift */; };
 		5F2FE4201F06C7DD00BB4532 /* BCMovingGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE41F1F06C7DD00BB4532 /* BCMovingGround.swift */; };
 		5F2FE4241F06DB2E00BB4532 /* BCCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE4231F06DB2E00BB4532 /* BCCharacter.swift */; };
+		5FD658D31F06FD1B007598FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD658D21F06FD1B007598FF /* Constants.swift */; };
+		5FD658D51F0701E7007598FF /* BCCloudGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD658D41F0701E7007598FF /* BCCloudGenerator.swift */; };
+		5FD658D71F0702B4007598FF /* BCCloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FD658D61F0702B4007598FF /* BCCloud.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		5F2FE4131F06BEEC00BB4532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F2FE41F1F06C7DD00BB4532 /* BCMovingGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCMovingGround.swift; sourceTree = "<group>"; };
 		5F2FE4231F06DB2E00BB4532 /* BCCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCharacter.swift; sourceTree = "<group>"; };
+		5FD658D21F06FD1B007598FF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		5FD658D41F0701E7007598FF /* BCCloudGenerator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCloudGenerator.swift; sourceTree = "<group>"; };
+		5FD658D61F0702B4007598FF /* BCCloud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCCloud.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +114,9 @@
 				5F2FE3EB1F06BEEC00BB4532 /* AppDelegate.swift */,
 				5F2FE3EF1F06BEEC00BB4532 /* Actions.sks */,
 				5F2FE3F11F06BEEC00BB4532 /* GameScene.swift */,
+				5FD658D21F06FD1B007598FF /* Constants.swift */,
 				5F2FE41F1F06C7DD00BB4532 /* BCMovingGround.swift */,
+				5FD658D81F0702B9007598FF /* Cloud Generation */,
 				5F2FE4231F06DB2E00BB4532 /* BCCharacter.swift */,
 				5F2FE3F31F06BEEC00BB4532 /* GameViewController.swift */,
 				5F2FE3F51F06BEEC00BB4532 /* Main.storyboard */,
@@ -135,6 +143,15 @@
 				5F2FE4131F06BEEC00BB4532 /* Info.plist */,
 			);
 			path = "Flip NinjaUITests";
+			sourceTree = "<group>";
+		};
+		5FD658D81F0702B9007598FF /* Cloud Generation */ = {
+			isa = PBXGroup;
+			children = (
+				5FD658D61F0702B4007598FF /* BCCloud.swift */,
+				5FD658D41F0701E7007598FF /* BCCloudGenerator.swift */,
+			);
+			name = "Cloud Generation";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,9 +291,12 @@
 			files = (
 				5F2FE3F21F06BEEC00BB4532 /* GameScene.swift in Sources */,
 				5F2FE3F41F06BEEC00BB4532 /* GameViewController.swift in Sources */,
+				5FD658D51F0701E7007598FF /* BCCloudGenerator.swift in Sources */,
 				5F2FE3EC1F06BEEC00BB4532 /* AppDelegate.swift in Sources */,
+				5FD658D71F0702B4007598FF /* BCCloud.swift in Sources */,
 				5F2FE4201F06C7DD00BB4532 /* BCMovingGround.swift in Sources */,
 				5F2FE4241F06DB2E00BB4532 /* BCCharacter.swift in Sources */,
+				5FD658D31F06FD1B007598FF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +541,7 @@
 				5F2FE4181F06BEEC00BB4532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F2FE4191F06BEEC00BB4532 /* Build configuration list for PBXNativeTarget "Flip NinjaTests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +550,7 @@
 				5F2FE41B1F06BEEC00BB4532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5F2FE41C1F06BEEC00BB4532 /* Build configuration list for PBXNativeTarget "Flip NinjaUITests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +559,7 @@
 				5F2FE41E1F06BEEC00BB4532 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
