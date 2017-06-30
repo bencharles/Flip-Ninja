@@ -12,6 +12,7 @@ import GameplayKit
 class GameScene: SKScene {
     
     var movingGround: BCMovingGround!
+    var character: BCCharacter!
     
     override func didMove(to view: SKView) {
         
@@ -21,9 +22,16 @@ class GameScene: SKScene {
         movingGround.position = CGPoint(x: 0, y: view.frame.size.height/2)
         addChild(movingGround)
         
+        character = BCCharacter()
+        character.position = CGPoint(x: 70, y: movingGround.position.y + movingGround.frame.size.height/2 + character.frame.size.height/2)
+        addChild(character)
+        character.breathe()
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        movingGround.start()
+        //movingGround.start()
+        character.stop()
+        character.startRunning()
     }
 }
