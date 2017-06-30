@@ -17,6 +17,7 @@
 		5F2FE4071F06BEEC00BB4532 /* Flip_NinjaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE4061F06BEEC00BB4532 /* Flip_NinjaTests.swift */; };
 		5F2FE4121F06BEEC00BB4532 /* Flip_NinjaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE4111F06BEEC00BB4532 /* Flip_NinjaUITests.swift */; };
 		5F2FE4201F06C7DD00BB4532 /* BCMovingGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE41F1F06C7DD00BB4532 /* BCMovingGround.swift */; };
+		5F2FE4221F06DA1300BB4532 /* MLCharacter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE4211F06DA1300BB4532 /* MLCharacter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		5F2FE4111F06BEEC00BB4532 /* Flip_NinjaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flip_NinjaUITests.swift; sourceTree = "<group>"; };
 		5F2FE4131F06BEEC00BB4532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F2FE41F1F06C7DD00BB4532 /* BCMovingGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCMovingGround.swift; sourceTree = "<group>"; };
+		5F2FE4211F06DA1300BB4532 /* MLCharacter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLCharacter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				5F2FE3EB1F06BEEC00BB4532 /* AppDelegate.swift */,
 				5F2FE3EF1F06BEEC00BB4532 /* Actions.sks */,
 				5F2FE3F11F06BEEC00BB4532 /* GameScene.swift */,
+				5F2FE4211F06DA1300BB4532 /* MLCharacter.swift */,
 				5F2FE41F1F06C7DD00BB4532 /* BCMovingGround.swift */,
 				5F2FE3F31F06BEEC00BB4532 /* GameViewController.swift */,
 				5F2FE3F51F06BEEC00BB4532 /* Main.storyboard */,
@@ -271,6 +274,7 @@
 			files = (
 				5F2FE3F21F06BEEC00BB4532 /* GameScene.swift in Sources */,
 				5F2FE3F41F06BEEC00BB4532 /* GameViewController.swift in Sources */,
+				5F2FE4221F06DA1300BB4532 /* MLCharacter.swift in Sources */,
 				5F2FE3EC1F06BEEC00BB4532 /* AppDelegate.swift in Sources */,
 				5F2FE4201F06C7DD00BB4532 /* BCMovingGround.swift in Sources */,
 			);
