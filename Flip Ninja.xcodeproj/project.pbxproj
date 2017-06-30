@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5F2FE3EC1F06BEEC00BB4532 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE3EB1F06BEEC00BB4532 /* AppDelegate.swift */; };
-		5F2FE3EE1F06BEEC00BB4532 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F2FE3ED1F06BEEC00BB4532 /* GameScene.sks */; };
 		5F2FE3F01F06BEEC00BB4532 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 5F2FE3EF1F06BEEC00BB4532 /* Actions.sks */; };
 		5F2FE3F21F06BEEC00BB4532 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE3F11F06BEEC00BB4532 /* GameScene.swift */; };
 		5F2FE3F41F06BEEC00BB4532 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE3F31F06BEEC00BB4532 /* GameViewController.swift */; };
@@ -17,6 +16,7 @@
 		5F2FE3FC1F06BEEC00BB4532 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5F2FE3FA1F06BEEC00BB4532 /* LaunchScreen.storyboard */; };
 		5F2FE4071F06BEEC00BB4532 /* Flip_NinjaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE4061F06BEEC00BB4532 /* Flip_NinjaTests.swift */; };
 		5F2FE4121F06BEEC00BB4532 /* Flip_NinjaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE4111F06BEEC00BB4532 /* Flip_NinjaUITests.swift */; };
+		5F2FE4201F06C7DD00BB4532 /* BCMovingGround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F2FE41F1F06C7DD00BB4532 /* BCMovingGround.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 /* Begin PBXFileReference section */
 		5F2FE3E81F06BEEC00BB4532 /* Flip Ninja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flip Ninja.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F2FE3EB1F06BEEC00BB4532 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5F2FE3ED1F06BEEC00BB4532 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		5F2FE3EF1F06BEEC00BB4532 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		5F2FE3F11F06BEEC00BB4532 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		5F2FE3F31F06BEEC00BB4532 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +52,7 @@
 		5F2FE40D1F06BEEC00BB4532 /* Flip NinjaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flip NinjaUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5F2FE4111F06BEEC00BB4532 /* Flip_NinjaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flip_NinjaUITests.swift; sourceTree = "<group>"; };
 		5F2FE4131F06BEEC00BB4532 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5F2FE41F1F06C7DD00BB4532 /* BCMovingGround.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BCMovingGround.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,9 +104,9 @@
 			isa = PBXGroup;
 			children = (
 				5F2FE3EB1F06BEEC00BB4532 /* AppDelegate.swift */,
-				5F2FE3ED1F06BEEC00BB4532 /* GameScene.sks */,
 				5F2FE3EF1F06BEEC00BB4532 /* Actions.sks */,
 				5F2FE3F11F06BEEC00BB4532 /* GameScene.swift */,
+				5F2FE41F1F06C7DD00BB4532 /* BCMovingGround.swift */,
 				5F2FE3F31F06BEEC00BB4532 /* GameViewController.swift */,
 				5F2FE3F51F06BEEC00BB4532 /* Main.storyboard */,
 				5F2FE3F81F06BEEC00BB4532 /* Assets.xcassets */,
@@ -242,7 +242,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F2FE3F71F06BEEC00BB4532 /* Main.storyboard in Resources */,
-				5F2FE3EE1F06BEEC00BB4532 /* GameScene.sks in Resources */,
 				5F2FE3F91F06BEEC00BB4532 /* Assets.xcassets in Resources */,
 				5F2FE3FC1F06BEEC00BB4532 /* LaunchScreen.storyboard in Resources */,
 				5F2FE3F01F06BEEC00BB4532 /* Actions.sks in Resources */,
@@ -273,6 +272,7 @@
 				5F2FE3F21F06BEEC00BB4532 /* GameScene.swift in Sources */,
 				5F2FE3F41F06BEEC00BB4532 /* GameViewController.swift in Sources */,
 				5F2FE3EC1F06BEEC00BB4532 /* AppDelegate.swift in Sources */,
+				5F2FE4201F06C7DD00BB4532 /* BCMovingGround.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
