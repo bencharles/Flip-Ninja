@@ -15,6 +15,7 @@ class GameScene: SKScene {
     var character: BCCharacter!
     var isStarted = false
     var cloudGenerator: BCCloudGenerator!
+    var obstacleGenerator: BCObstacleGenerator!
     
     override func didMove(to view: SKView) {
         
@@ -35,13 +36,33 @@ class GameScene: SKScene {
         cloudGenerator.populate(num: 2)
         cloudGenerator.startGenerating(seconds: 15)
         
+        //let obstacle = BCObstacle(size: CGSize(width: 50, height: 50))
+        //obstacle.position = CGPoint(x: 0, y:0)
+        //addChild(obstacle)
+        obstacleGenerator = BCObstacleGenerator(color: UIColor.clear, size: view.frame.size)
+        obstacleGenerator.position = view.center
+        addChild(obstacleGenerator)
+        
+        let tapToStartLabel = SKLabelNode(text: "Tap to Play!")
+        tapToStartLabel.name = "tapToStartLabel"
+        tapToStartLabel.position.x = view.center.x
+        tapToStartLabel.position.y = view.center.y + view.frame.height/4
+        tapToStartLabel.fontColor = UIColor.black
+        tapToStartLabel.fontName = "Helvetica"
+        addChild(tapToStartLabel)
+        
     }
     
     func start() {
         isStarted = true
+        
+        let tapToStartLabel = childNode(withName: "tapToStartLabel")
+        tapToStartLabel?.removeFromParent()
+        
         character.stopBreathing()
         character.startRunning()
         movingGround.start()
+        obstacleGenerator.startGeneratingObstacles(seconds: 0.4)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
